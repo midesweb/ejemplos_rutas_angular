@@ -1,7 +1,15 @@
 <nav>
-  <a routerLink="/">Home</a> | 
-  <a routerLink="/contacto">Contacto</a> | 
-  <a routerLink="/quienessomos">Quienes somos</a> | 
+  <ul>
+    <li routerLinkActive="activo" [routerLinkActiveOptions]="{exact: true}">
+      <a routerLink="/">Home</a>
+    </li>
+    <li routerLinkActive="activo">
+      <a routerLink="/contacto">Contacto</a>
+    </li>
+    <li routerLinkActive="activo">
+      <a routerLink="/quienessomos">Quienes somos</a>
+    </li>
+  </ul>
 </nav>
 
 <router-outlet></router-outlet>
