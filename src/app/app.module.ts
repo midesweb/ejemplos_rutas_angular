@@ -6,11 +6,14 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { QuienesSomosComponent } from './quienes-somos/quienes-somos.component';
+import { CochesComponent } from './coches/coches.component';
 
 const rutas: Routes = [
   { path: '', component: HomeComponent },
   { path: 'contacto', component: ContactoComponent },
-  { path: 'quienessomos', component: QuienesSomosComponent },  
+  { path: 'quienessomos', component: QuienesSomosComponent },
+  { path: 'coches', component: CochesComponent },
+  { path: 'coches/:marca/:modelo', component: CochesComponent }
 ];
 
 @NgModule({
@@ -18,7 +21,8 @@ const rutas: Routes = [
     AppComponent,
     HomeComponent,
     ContactoComponent,
-    QuienesSomosComponent
+    QuienesSomosComponent,
+    CochesComponent
   ],
   imports: [
     BrowserModule,
