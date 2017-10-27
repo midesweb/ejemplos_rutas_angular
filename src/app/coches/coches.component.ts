@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Params } from '@angular/router';
 
 @Component({
   selector: 'app-coches',
@@ -18,6 +18,15 @@ export class CochesComponent implements OnInit {
         modelo: this.rutaActiva.snapshot.params.modelo
       };
     }
+    this.rutaActiva.params.subscribe(
+      (params: Params) => {
+        console.log('asigno parametros', params);
+        if (params.modelo && params.marca) {
+          this.coche.modelo = params.modelo;
+          this.coche.marca = params.marca;
+        }
+      }
+    );
   }
 
 }
