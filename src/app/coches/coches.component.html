@@ -1,12 +1,9 @@
 <h1>
   Coches en venta
 </h1>
-<div *ngIf="!coche; else muestraCoche">No tengo coche</div>
-<ng-template #muestraCoche>
-  <p>
-    Este es un coche marca: {{coche.marca}}
-  </p> 
-  <p>
-    Modelo: {{coche.modelo}}
-  </p>
-</ng-template>
+<p>
+  Este es un coche marca: {{coche.marca}}
+</p> 
+<p>
+  Modelo: {{coche.modelo}}
+</p>

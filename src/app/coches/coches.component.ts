@@ -12,12 +12,10 @@ export class CochesComponent implements OnInit {
   constructor(private rutaActiva: ActivatedRoute) { }
 
   ngOnInit() {
-    if (this.rutaActiva.snapshot.params.marca && this.rutaActiva.snapshot.params.modelo) {
-      this.coche = {
-        marca: this.rutaActiva.snapshot.params.marca,
-        modelo: this.rutaActiva.snapshot.params.modelo
-      };
-    }
+    this.coche = {
+      marca: this.rutaActiva.snapshot.params.marca,
+      modelo: this.rutaActiva.snapshot.params.modelo
+    };
   }
 
 }

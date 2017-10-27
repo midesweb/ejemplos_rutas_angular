@@ -12,7 +12,6 @@ const rutas: Routes = [
   { path: '', component: HomeComponent },
   { path: 'contacto', component: ContactoComponent },
   { path: 'quienessomos', component: QuienesSomosComponent },
-  { path: 'coches', component: CochesComponent },
   { path: 'coches/:marca/:modelo', component: CochesComponent }
 ];
 
