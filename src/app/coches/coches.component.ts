@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-coches',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./coches.component.css']
 })
 export class CochesComponent implements OnInit {
+  coche: {marca: string, modelo: string};
 
-  constructor() { }
+  constructor(private rutaActiva: ActivatedRoute) { }
 
   ngOnInit() {
+    if (this.rutaActiva.snapshot.params.marca && this.rutaActiva.snapshot.params.modelo) {
+      this.coche = {
+        marca: this.rutaActiva.snapshot.params.marca,
+        modelo: this.rutaActiva.snapshot.params.modelo
+      };
+    }
   }
 
 }
